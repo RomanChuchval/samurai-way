@@ -4,36 +4,25 @@ import main_background from '../../assets/back.jpeg'
 import s from './Profile.module.css';
 import MyPosts from "./MyPosts/Post/MyPosts";
 import Post from './MyPosts/Post/Post'
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
+
+    let posts = [
+        {id: 1, message: 'Hello!', likeCount: 12},
+        {id: 2, message: 'How Are you?', likeCount: 11},
+        {id: 3, message: 'What a day!', likeCount: 23},
+        {id: 4, message: 'hahahha lol!', likeCount: 43},
+        {id: 5, message: 'Go home!', likeCount: 13},
+        {id: 6, message: 'How match it cost?', likeCount: 4},
+        {id: 7, message: 'Yo!', likeCount: 123},
+    ]
+    let postData = posts.map( p => <Post message={p.message} likeCount={p.likeCount} id={p.id} /> )
     return (
         <div>
-            <div className={s.profile_section}>
-                <div className={s.profile_background}>
-                    <img className={s.profile_image}
-                         src={main_background} alt="##"/>
-                </div>
-                <div className={s.profile_avatar}>
-                    <img className={s.avatar} src={avatar} alt='qq'/>
-                </div>
-                <div className={s.profile_description}>
-                    <div className={s.profile_info_name}>
-                        Roman Chuchval
-                    </div>
-                    <div className={s.profile_info}>
-                        Date of Birth: 9 February
-                    </div>
-                    <div className={s.profile_info}>
-                        Age: 28
-                    </div>
-                    <div className={s.profile_info}>
-                        City: Minsk, Belarus
-                    </div>
-                </div>
-            </div>
+            <ProfileInfo />
             <MyPosts holder='Send message...'/>
-            <Post message={'Hi, how are you!'} likeCount={15}/>
-            <Post message={'What a beautiful day!'} likeCount={102}/>
+            { postData }
         </div>
     )
 }
