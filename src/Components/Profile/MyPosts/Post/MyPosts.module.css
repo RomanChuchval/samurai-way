@@ -1,0 +1,58 @@
+.posts_section {
+    margin: 15px;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.posts_heading {
+    grid-column: span 3;
+    align-self: center;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.new_post {
+    grid-row: 2 / 3;
+    grid-column: span 3;
+}
+
+.new_post_heading {
+    align-self: center;
+}
+
+.new_post {
+    display: grid;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.message_input {
+    background-color: lightslategray;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 33%;
+}
+
+.new_post_input {
+    grid-column: span 3;
+}
+
+.post_send {
+    grid-column: span 2;
+}
+
+.send_btn {
+    cursor: pointer;
+    border: none;
+    justify-self: right;
+    align-self: center;
+    width: 70px;
+    height: 25px;
+    background-color: dimgray;
+    color: white;
+    font-style: oblique;
+}
+

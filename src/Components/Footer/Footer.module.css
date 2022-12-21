@@ -1,0 +1,11 @@
+.footer {
+    grid-area: f;
+    background-color: #0094ff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    font-size: 12px;
+}

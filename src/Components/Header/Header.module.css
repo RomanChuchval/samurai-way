@@ -1,0 +1,17 @@
+
+.header {
+    grid-area: h;
+    background-color: #0094ff;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.header img {
+    width: 65px;
+    margin: 5px;
+}
+
