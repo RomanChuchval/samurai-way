@@ -18,12 +18,6 @@
     width: 100%;
 }
 
-.profile {
-    grid-area: c;
-    background-color: #0094ff;
-    border-radius: 5px;
-}
-
 .avatar {
     width: 100%;
     border-radius: 50%;

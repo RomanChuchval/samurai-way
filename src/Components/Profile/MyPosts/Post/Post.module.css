@@ -1,32 +1,30 @@
 .post {
     display: grid;
-    grid-template-rows: 100px;
-    grid-template-columns: 50px 1fr;
-    gap: 20px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 80px 1fr;
+    column-gap: 20px;
 }
 
 .post1 {
     grid-row: 3 / 4;
     grid-column: span 3;
-}
-
-.post2 {
-    grid-row: 4 / 5;
-    grid-column: span 3;
-}
-
-.post3 {
-    grid-row: 5 / 6;
-    grid-column: span 3;
+    margin: 10px;
 }
 
 .post_ava {
-    width: 100%;
+    width: 60px;
     border-radius: 50%;
     align-self: center;
+    justify-self: center;
 }
 
 .item {
     align-self: center;
     color: black;
+}
+
+.likes {
+    color: #252525;
+    margin: 5px;
+    justify-self: center;
 }

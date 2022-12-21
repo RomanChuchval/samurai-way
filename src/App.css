@@ -1,9 +1,9 @@
 body {
-    background-color: #616161;
+    background-color: #252525;
     font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-.app-wrapper {
+.app_wrapper {
     display: grid;
     grid-template-areas:
         'h h'
@@ -13,4 +13,10 @@ body {
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
     margin: 20px;
+}
+
+.app_wrapper_content {
+    grid-area: c;
+    background-color: #0094ff;
+    border-radius: 5px;
 }
