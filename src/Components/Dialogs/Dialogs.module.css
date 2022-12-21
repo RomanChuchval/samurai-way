@@ -1,0 +1,46 @@
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+.dialog_items {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.dialog_items .active {
+    color: #ff2322;
+}
+
+.dialog {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dialog_name {
+    align-self: center;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.messages {
+    padding: 10px;
+}
+
+.message {
+    padding-top: 10px;
+    padding-left: 35px;
+}
+
+.avatar {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.active {
+    color: #ff2322;
+}
