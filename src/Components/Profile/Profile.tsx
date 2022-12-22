@@ -1,7 +1,4 @@
 import React from "react";
-import avatar from '../../assets/2022-12-18 16.jpg'
-import main_background from '../../assets/back.jpeg'
-import s from './Profile.module.css';
 import MyPosts from "./MyPosts/Post/MyPosts";
 import Post from './MyPosts/Post/Post'
 import ProfileInfo from "./ProfileInfo/ProfileInfo";

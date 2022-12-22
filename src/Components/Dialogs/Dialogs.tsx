@@ -1,7 +1,7 @@
 import React from "react";
 import s from './Dialogs.module.css'
-import DialogItem from "./DialogItem";
-import Message from "./Message";
+import DialogFriends from "./DialogFriends/DialogFriends";
+import Message from "./DialogMessages/Message";
 
 type DialogsPropsType = {}
 
@@ -26,16 +26,16 @@ const Dialogs = (props: DialogsPropsType) => {
         {message: 'How match it cost?'},
         {message: 'Yo!'},
     ]
-    let dialogsData = dialogs.map( d => <DialogItem name={d.name} id={d.id}/> )
-    let messagesData = messages.map( m => <Message message={m.message}/> )
+    let dialogsFriends = dialogs.map(d => <DialogFriends name={d.name} id={d.id}/>)
+    let messagesList = messages.map(m => <Message message={m.message}/>)
 
     return (
         <div className={s.dialogs}>
-            <div className={s.dialog_items}>
-                { dialogsData }
+            <div className={s.dialog_friends}>
+                {dialogsFriends}
             </div>
             <div className={s.messages}>
-                { messagesData }
+                {messagesList}
             </div>
         </div>
     )

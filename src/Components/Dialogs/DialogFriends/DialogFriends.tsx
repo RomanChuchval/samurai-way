@@ -1,13 +1,13 @@
-import s from "./DialogItem.module.css";
-import ava4 from "../../assets/ava4.png";
+import s from "./DialogFriends.module.css";
+import ava4 from "../../../assets/ava4.png";
 import {NavLink} from "react-router-dom";
 import React from "react";
 
-type DialogItemPropsType = {
+type DialogFriendsPropsType = {
     name: string | number | symbol,
     id: string,
 }
-const DialogItem = (props: DialogItemPropsType) => {
+const DialogFriends = (props: DialogFriendsPropsType) => {
     let path = '/dialogs/' + props.id;
     return (
         <div className={`${s.dialog} ${s.active}`}>
@@ -17,4 +17,4 @@ const DialogItem = (props: DialogItemPropsType) => {
     )
 }
 
-export default DialogItem
+export default DialogFriends;

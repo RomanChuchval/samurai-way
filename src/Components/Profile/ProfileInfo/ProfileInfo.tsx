@@ -26,6 +26,10 @@ const ProfileInfo = () => {
                     <div className={s.profile_info}>
                         City: Minsk, Belarus
                     </div>
+                    <div className={s.profile_info}>
+                        Education: IT-Incubator'23
+                    </div>
+
                 </div>
             </div>
     )
