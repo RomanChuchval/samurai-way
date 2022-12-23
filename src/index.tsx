@@ -33,7 +33,7 @@ let dialogs = [
 ]
 
 
-ReactDOM.render(<App PostsArray={posts}
+ReactDOM.render(<App PostsMessages={posts}
                      DialogsMessages={messages}
                      DialogFriends={dialogs}/>,
     document.getElementById('root'));

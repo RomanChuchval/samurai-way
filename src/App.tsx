@@ -11,7 +11,7 @@ import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 
 type AppPropsType = {
-    PostsArray: { id: number; message: string; likeCount: number}[],
+    PostsMessages: { id: number; message: string; likeCount: number}[],
     DialogsMessages: {message: string} [],
     DialogFriends: {id: string, name: string}[],
 
@@ -25,7 +25,7 @@ const App = (props:AppPropsType) => {
                 <div className='app_wrapper_content'>
                     <Route path='/dialogs' render= { () => <Dialogs DialogsMessages={props.DialogsMessages}
                                                                     DialogFriends={props.DialogFriends}/>}/>
-                    <Route path='/profile' render= { () => <Profile PostsMessage={props.PostsArray} />}/>
+                    <Route path='/profile' render= { () => <Profile PostsMessage={props.PostsMessages} />}/>
                     <Route path='/news' render= { () => <News />}/>
                     <Route path='/music' render= { () => <Music />}/>
                     <Route path='/settings' render= { () => <Settings />}/>
