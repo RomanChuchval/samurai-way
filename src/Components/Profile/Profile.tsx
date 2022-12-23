@@ -5,11 +5,10 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 
 type ProfilePropsType = {
-    messageInfo: { id: number; message: string; likeCount: number; }[],
+    PostsMessage: { id: number; message: string; likeCount: number; }[],
 }
 const Profile = (props: ProfilePropsType) => {
-    debugger
-    let postData = props.messageInfo.map(p => <Post message={p.message} likeCount={p.likeCount}/>)
+    let postData = props.PostsMessage.map(p => <Post message={p.message} likeCount={p.likeCount}/>)
     return (
         <div>
             <ProfileInfo/>

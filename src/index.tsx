@@ -13,6 +13,27 @@ let posts = [
     {id: 7, message: 'Yo!', likeCount: 123},
 ];
 
+let messages = [
+    {message: 'Hello!'},
+    {message: 'How Are you?'},
+    {message: 'What a day!'},
+    {message: 'hahahha lol!'},
+    {message: 'Go home!'},
+    {message: 'How match it cost?'},
+    {message: 'Yo!'},
+]
+
+let dialogs = [
+    {id: '1', name: 'Roman'},
+    {id: '2', name: 'Lera'},
+    {id: '3', name: 'Dimych'},
+    {id: '4', name: 'Sergey'},
+    {id: '5', name: 'Pavel'},
+    {id: '6', name: 'Andrew'},
+]
 
 
-ReactDOM.render(<App array={posts} />, document.getElementById('root'));
+ReactDOM.render(<App PostsArray={posts}
+                     DialogsMessages={messages}
+                     DialogFriends={dialogs}/>,
+    document.getElementById('root'));

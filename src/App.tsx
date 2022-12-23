@@ -11,18 +11,21 @@ import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 
 type AppPropsType = {
-array: { id: number; message: string; likeCount: number}[],
+    PostsArray: { id: number; message: string; likeCount: number}[],
+    DialogsMessages: {message: string} [],
+    DialogFriends: {id: string, name: string}[],
+
 }
 const App = (props:AppPropsType) => {
-    debugger
     return (
         <BrowserRouter>
             <div className='app_wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app_wrapper_content'>
-                    <Route path='/dialogs' render= { () => <Dialogs />}/>
-                    <Route path='/profile' render= { () => <Profile messageInfo={props.array} />}/>
+                    <Route path='/dialogs' render= { () => <Dialogs DialogsMessages={props.DialogsMessages}
+                                                                    DialogFriends={props.DialogFriends}/>}/>
+                    <Route path='/profile' render= { () => <Profile PostsMessage={props.PostsArray} />}/>
                     <Route path='/news' render= { () => <News />}/>
                     <Route path='/music' render= { () => <Music />}/>
                     <Route path='/settings' render= { () => <Settings />}/>

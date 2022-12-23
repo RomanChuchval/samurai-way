@@ -8,8 +8,6 @@ type PostPropsType = {
     likeCount: number,
 }
 const Post = (props: PostPropsType) => {
-    debugger
-
     return (
         <div>
             <div className={`${s.post} ${s.post1}`}>
