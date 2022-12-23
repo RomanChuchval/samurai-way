@@ -8,15 +8,6 @@ type DialogsPropsType = {}
 
 const Dialogs = (props: DialogsPropsType) => {
 
-    let dialogs = [
-        {id: '1', name: 'Roman'},
-        {id: '2', name: 'Lera'},
-        {id: '3', name: 'Dimych'},
-        {id: '4', name: 'Sergey'},
-        {id: '5', name: 'Pavel'},
-        {id: '6', name: 'Andrew'},
-    ]
-
     let messages = [
         {message: 'Hello!'},
         {message: 'How Are you?'},
@@ -26,6 +17,17 @@ const Dialogs = (props: DialogsPropsType) => {
         {message: 'How match it cost?'},
         {message: 'Yo!'},
     ]
+
+    let dialogs = [
+        {id: '1', name: 'Roman'},
+        {id: '2', name: 'Lera'},
+        {id: '3', name: 'Dimych'},
+        {id: '4', name: 'Sergey'},
+        {id: '5', name: 'Pavel'},
+        {id: '6', name: 'Andrew'},
+    ]
+
+
     let dialogsFriends = dialogs.map(d => <DialogFriends name={d.name} id={d.id}/>)
     let messagesList = messages.map(m => <Message message={m.message}/>)
 

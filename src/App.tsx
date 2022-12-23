@@ -10,18 +10,22 @@ import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 
-const App = () => {
+type AppPropsType = {
+array: { id: number; message: string; likeCount: number}[],
+}
+const App = (props:AppPropsType) => {
+    debugger
     return (
         <BrowserRouter>
             <div className='app_wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app_wrapper_content'>
-                    <Route path='/dialogs' component={Dialogs}/>
-                    <Route path='/profile' component={Profile}/>
-                    <Route path='/news' component={News}/>
-                    <Route path='/music' component={Music}/>
-                    <Route path='/settings' component={Settings}/>
+                    <Route path='/dialogs' render= { () => <Dialogs />}/>
+                    <Route path='/profile' render= { () => <Profile messageInfo={props.array} />}/>
+                    <Route path='/news' render= { () => <News />}/>
+                    <Route path='/music' render= { () => <Music />}/>
+                    <Route path='/settings' render= { () => <Settings />}/>
                 </div>
                 <Footer/>
             </div>

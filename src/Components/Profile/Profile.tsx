@@ -3,23 +3,18 @@ import MyPosts from "./MyPosts/Post/MyPosts";
 import Post from './MyPosts/Post/Post'
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
 
-    let posts = [
-        {id: 1, message: 'Hello!', likeCount: 12},
-        {id: 2, message: 'How Are you?', likeCount: 11},
-        {id: 3, message: 'What a day!', likeCount: 23},
-        {id: 4, message: 'hahahha lol!', likeCount: 43},
-        {id: 5, message: 'Go home!', likeCount: 13},
-        {id: 6, message: 'How match it cost?', likeCount: 4},
-        {id: 7, message: 'Yo!', likeCount: 123},
-    ]
-    let postData = posts.map( p => <Post message={p.message} likeCount={p.likeCount} id={p.id} /> )
+type ProfilePropsType = {
+    messageInfo: { id: number; message: string; likeCount: number; }[],
+}
+const Profile = (props: ProfilePropsType) => {
+    debugger
+    let postData = props.messageInfo.map(p => <Post message={p.message} likeCount={p.likeCount}/>)
     return (
         <div>
-            <ProfileInfo />
+            <ProfileInfo/>
             <MyPosts holder='Send message...'/>
-            { postData }
+            {postData}
         </div>
     )
 }
