@@ -4,17 +4,18 @@ import DialogFriends from "./DialogFriends/DialogFriends";
 import Message from "./DialogMessages/Message";
 
 type DialogsPropsType = {
-    DialogsMessages: {message: string}[],
-    DialogFriends: {id: string, name: string}[]
+    /*DialogsMessages: { message: string }[],
+    DialogFriends: { id: string, name: string }[]*/
+    data: {
+            dialogs: { id: string, name: string }[],
+            messages: { message: string }[],
+    }
 }
 
 
 const Dialogs = (props: DialogsPropsType) => {
-
-
-
-    let dialogsFriends = props.DialogFriends.map(d => <DialogFriends name={d.name} id={d.id}/>)
-    let messagesList = props.DialogsMessages.map(m => <Message message={m.message}/>)
+    let dialogsFriends = props.data.dialogs.map(d => <DialogFriends name={d.name} id={d.id}/>)
+    let messagesList = props.data.messages.map(m => <Message message={m.message}/>)
 
     return (
         <div className={s.dialogs}>

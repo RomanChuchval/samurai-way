@@ -10,25 +10,33 @@ import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 
-type AppPropsType = {
-    PostsMessages: { id: number; message: string; likeCount: number}[],
-    DialogsMessages: {message: string} [],
-    DialogFriends: {id: string, name: string}[],
 
+type AppPropsType = {
+    state: {
+        dialogsPage: {
+            messages: { message: string }[],
+            dialogs: { id: string, name: string }[],
+        },
+        profilePage: {
+            posts: { id: number, message: string, likeCount: number }[]
+        },
+        navbar: {
+            friends: {name: string}[],
+        },
+    }
 }
-const App = (props:AppPropsType) => {
+const App = (props: AppPropsType) => {
     return (
         <BrowserRouter>
             <div className='app_wrapper'>
                 <Header/>
-                <Navbar/>
+                <Navbar data={props.state.navbar}/>
                 <div className='app_wrapper_content'>
-                    <Route path='/dialogs' render= { () => <Dialogs DialogsMessages={props.DialogsMessages}
-                                                                    DialogFriends={props.DialogFriends}/>}/>
-                    <Route path='/profile' render= { () => <Profile PostsMessage={props.PostsMessages} />}/>
-                    <Route path='/news' render= { () => <News />}/>
-                    <Route path='/music' render= { () => <Music />}/>
-                    <Route path='/settings' render= { () => <Settings />}/>
+                    <Route path='/dialogs' render={() => <Dialogs data={props.state.dialogsPage}/>}/>
+                    <Route path='/profile' render={() => <Profile data={props.state.profilePage}/>}/>
+                    <Route path='/news' render={() => <News/>}/>
+                    <Route path='/music' render={() => <Music/>}/>
+                    <Route path='/settings' render={() => <Settings/>}/>
                 </div>
                 <Footer/>
             </div>

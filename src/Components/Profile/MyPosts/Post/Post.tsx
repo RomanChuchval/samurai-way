@@ -3,7 +3,7 @@ import avatar from "../../../../assets/2022-12-18 16.jpg";
 import React from "react";
 
 type PostPropsType = {
-    id?: number,
+    id: number,
     message: string,
     likeCount: number,
 }

@@ -7,6 +7,7 @@ type DialogFriendsPropsType = {
     name: string | number | symbol,
     id: string,
 }
+
 const DialogFriends = (props: DialogFriendsPropsType) => {
     let path = '/dialogs/' + props.id;
     return (
