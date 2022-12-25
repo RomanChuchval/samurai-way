@@ -8,10 +8,14 @@
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
 }
 
 .messages {
-    padding: 10px;
+    display: grid;
+    margin-left: 10px;
+    gap: 5px;
+    border-left: #252525 dotted 1px;
 }
 
 

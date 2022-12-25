@@ -21,7 +21,7 @@ type AppPropsType = {
             posts: { id: number, message: string, likeCount: number }[]
         },
         navbar: {
-            friends: {name: string}[],
+            friends: { name: string }[],
         },
     }
 }

@@ -1,14 +1,13 @@
-
 let state = {
     dialogsPage: {
         messages: [
-            {message: 'Hello!'},
+            {message: 'Lorem ipsum dolor sit ae laudantium magni modi neque, obcaecati perspiciatis porro qui quidem quisquam quos rerum sed sequi vel veniam vero voluptatum! Blanditiis expedita explicabo non placeat voluptates.\n'},
             {message: 'How Are you?'},
-            {message: 'What a day!'},
+            {message: 'What a day!', myMessage: 's.myMessage'},
             {message: 'hahahha lol!'},
-            {message: 'Go home!'},
+            {message: 'Go home!', myMessage: 's.myMessage'},
             {message: 'How match it cost?'},
-            {message: 'Yo!'},
+            {message: 'Yo!', myMessage: 's.myMessage'},
         ],
 
         dialogs: [

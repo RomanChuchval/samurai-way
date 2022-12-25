@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "../Navbar.module.css";
+import s from "./Friends.module.css";
 import {NavLink} from "react-router-dom";
 import avatar from "../../../assets/ava3.png";
 

@@ -4,11 +4,9 @@ import DialogFriends from "./DialogFriends/DialogFriends";
 import Message from "./DialogMessages/Message";
 
 type DialogsPropsType = {
-    /*DialogsMessages: { message: string }[],
-    DialogFriends: { id: string, name: string }[]*/
     data: {
-            dialogs: { id: string, name: string }[],
-            messages: { message: string }[],
+        dialogs: { id: string, name: string }[],
+        messages: { message: string }[],
     }
 }
 

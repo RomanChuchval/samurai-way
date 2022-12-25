@@ -1,0 +1,21 @@
+
+
+.nav_friends_item {
+    display: grid;
+    padding: 10px;
+
+}
+
+.nav_friends_name {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    justify-self: center ;
+}
+
+.nav_friends_avatar {
+    display: grid;
+    border-radius: 50%;
+    width: 60px;
+    padding-top: 5px;
+}

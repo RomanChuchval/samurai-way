@@ -3,9 +3,15 @@ import React from "react";
 
 
 type MyPostsPropsType = {
-    holder: string;
 }
 const MyPosts = (props:MyPostsPropsType) => {
+    let newPostElement = React.useRef<HTMLTextAreaElement>(null)
+    let addPost =  () => {
+        if (newPostElement.current !== null) {
+            alert(newPostElement.current.value)
+        }
+    }
+
     return(
         <div className={s.posts_section}>
             <div className={s.posts_heading}>
@@ -16,11 +22,12 @@ const MyPosts = (props:MyPostsPropsType) => {
                     New Post
                 </div>
                 <div className={s.new_post_input}>
-                    <form action="src/Components#">
-                        <input className={s.message_input} type="text" placeholder={props.holder}/>
-                    </form>
+                    {/*<form  action="src/Components#">*/}
+                        <textarea ref={newPostElement}></textarea>
+                        {/*<input className={s.message_input} type="text" placeholder={props.holder}/>*/}
+                    {/*</form>*/}
                 </div>
-                <button className={s.send_btn}>Send</button>
+                <button onClick={addPost}  className={s.send_btn}>Send</button>
             </div>
         </div>
     )
