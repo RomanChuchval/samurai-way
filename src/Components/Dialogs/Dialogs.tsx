@@ -2,6 +2,7 @@ import React from "react";
 import s from './Dialogs.module.css'
 import DialogFriends from "./DialogFriends/DialogFriends";
 import Message from "./DialogMessages/Message";
+import SendMessage from "./SendMessage/SendMessage";
 
 type DialogsPropsType = {
     data: {
@@ -21,6 +22,7 @@ const Dialogs = (props: DialogsPropsType) => {
                 {dialogsFriends}
             </div>
             <div className={s.messages}>
+                <SendMessage />
                 {messagesList}
             </div>
         </div>

@@ -1,0 +1,25 @@
+.sendMessage_form {
+    display: grid ;
+}
+
+.textarea {
+    width: 70%;
+    height: 100px;
+    justify-self: center;
+    text-align: center;
+    outline: none;
+    border-radius: 30px;
+}
+
+.sendBtn {
+    width: 130px;
+    height: 45px;
+    justify-self: center;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: none;
+}
+
+.sendBtn:hover {
+    background-color: lightyellow;
+}

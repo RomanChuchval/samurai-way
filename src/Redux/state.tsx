@@ -1,3 +1,12 @@
+
+
+type rerenderTreeProps = {
+
+}
+
+let rerenderEntireTree = (props:rerenderTreeProps) => {
+     console.log('State changed')
+ }
 let state = {
     dialogsPage: {
         messages: [
@@ -39,4 +48,24 @@ let state = {
     }
 }
 
+
+ export const addPost = (postMessage:string): void => {
+     let newPost = {
+         id: 8,
+         message: postMessage,
+         likeCount: 0,
+     }
+ }
+
+//     state.profilePage.posts.push(newPost)
+//      rerenderEntireTree()
+// }
+//
+// type subscribePropsType = {
+//     observer: () => {}
+// }
+// export const subscribe = (props: subscribePropsType) => {
+//     rerenderEntireTree = props.observer;
+// }
+//
 export default state;
